@@ -147,7 +147,7 @@ header nav a:hover {
 .theme-switch-nav {
     display: flex;
     align-items: center;
-    margin-left: 25px; /* Adjust spacing from other nav items */
+    /* Removed margin-left for better mobile layout */
 }
 
 .theme-switch-wrapper {
@@ -316,7 +316,7 @@ body.dark-mode .skill-category h3 {
 }
 
 body.dark-mode footer {
-    background: #000000; /* Black footer */
+    background: #2c3e50; /* Black footer */
     color: #f0f0f0;
     border-top-color: #1abc9c;
 }
@@ -579,6 +579,13 @@ footer .social-links a:hover {
 
     header nav a {
         font-size: 16px; /* Smaller nav links */
+    }
+
+    .theme-switch-nav {
+        display: flex;
+        justify-content: center; /* Center the switch within its own space */
+        width: 100%; /* Ensure it takes full width to center properly */
+        padding: 10px 0; /* Add some padding */
     }
 
     .section-content {
