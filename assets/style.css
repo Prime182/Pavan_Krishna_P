@@ -143,6 +143,212 @@ header nav a:hover {
     transform: translateY(-2px); /* Slight lift */
 }
 
+/* Theme Switch Styles */
+.theme-switch-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 25px; /* Adjust spacing from other nav items */
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Remove margin-top */
+    position: static; /* Remove absolute positioning */
+    z-index: auto; /* Reset z-index */
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #1abc9c;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.mode-indicator {
+    color: #ecf0f1;
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/* Dark Mode Styles - Black Theme */
+body.dark-mode {
+    background-color: #000000; /* Black background */
+    color: #f0f0f0; /* Light grey text */
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Maintain light mode header gradient */
+    border-bottom-color: #1abc9c; /* Teal accent */
+}
+
+body.dark-mode header h1 {
+    color: #ffffff; /* White */
+}
+
+body.dark-mode header p,
+body.dark-mode .tagline {
+    color: #e0e0e0; /* Lighter grey */
+}
+
+body.dark-mode .social-links-header a {
+    color: #ffffff; /* White */
+}
+
+body.dark-mode .social-links-header a:hover {
+    color: #1abc9c; /* Teal on hover */
+}
+
+body.dark-mode header nav {
+    background: rgba(0, 0, 0, 0.95); /* Almost black, slightly less opaque nav */
+}
+
+body.dark-mode header nav a {
+    color: #f0f0f0;
+}
+
+body.dark-mode header nav a:hover {
+    color: #1abc9c; /* Teal on hover */
+}
+
+body.dark-mode .mode-indicator {
+    color: #f0f0f0;
+}
+
+body.dark-mode .theme-switch input:checked + .slider {
+    background-color: #1abc9c; /* Teal for switch */
+}
+
+body.dark-mode .section-content {
+    background: #1e1d1d; /* Dark grey for sections */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.9); /* Stronger shadow */
+}
+
+body.dark-mode .section-content h2 {
+    color: #ffffff; /* Teal for section headings */
+}
+
+body.dark-mode .section-content h2::after {
+    background-color: #1abc9c;
+}
+
+body.dark-mode .section-content h2 i {
+    color: #1abc9c;
+}
+
+body.dark-mode .experience-item,
+body.dark-mode .project-item,
+body.dark-mode .education-item {
+    background: #252525; /* Very dark grey/black for items */
+    border: 1px solid #222222; /* Darker grey border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7); /* Stronger shadow */
+}
+
+body.dark-mode .experience-item h3,
+body.dark-mode .project-item h3,
+body.dark-mode .education-item h3 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .experience-item .date,
+body.dark-mode .project-item .tech-stack {
+    color: #c0c0c0;
+}
+
+body.dark-mode .project-item ul li::before,
+body.dark-mode .experience-item ul li::before,
+body.dark-mode .section-content ul li::before {
+    color: #1abc9c; /* Teal for bullets */
+}
+
+body.dark-mode .skill-category {
+    background: #252525; /* Very dark grey/black for skill categories */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7); /* Stronger shadow */
+}
+
+body.dark-mode .skill-category h3 {
+    color: #f0f0f0;
+    border-bottom-color: #1abc9c; /* Teal for skill underlines */
+}
+
+body.dark-mode footer {
+    background: #000000; /* Black footer */
+    color: #f0f0f0;
+    border-top-color: #1abc9c;
+}
+
+body.dark-mode footer p {
+    color: #d0d0d0;
+}
+
+body.dark-mode footer .social-links a {
+    color: #f0f0f0;
+}
+
+body.dark-mode footer .social-links a:hover {
+    color: #1abc9c;
+}
+
+body.dark-mode .contact-info p {
+    color: #f0f0f0; /* White font */
+}
+
+body.dark-mode .contact-info p i {
+    color: #1abc9c;
+}
+
+body.dark-mode .contact-info a {
+    color: #1abc9c;
+}
+
+body.dark-mode .contact-info a:hover {
+    color: #f0f0f0; /* White font on hover */
+}
+
 /* Section Content Styles */
 .section-content {
     padding: 40px 0; /* More vertical padding */
