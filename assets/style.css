@@ -121,6 +121,7 @@ header nav ul {
     margin: 0;
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
 }
 
 header nav ul li {
@@ -314,11 +315,15 @@ footer .social-links a:hover {
 /* Contact Section Specific Styles */
 .contact-info {
     margin-top: 20px;
-    text-align: left;
+    text-align: center; /* Center align text for better mobile display */
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
+}
+
+.contact-info p {
+    word-wrap: break-word; /* Ensure long words break and wrap */
 }
 
 /* Responsive Design */
