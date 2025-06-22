@@ -321,6 +321,132 @@ footer .social-links a:hover {
     padding: 0 20px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px; /* Adjust padding for smaller fixed nav */
+    }
+
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    header {
+        padding: 40px 0 20px;
+    }
+
+    header h1 {
+        font-size: 3em; /* Smaller font size for mobile */
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .social-links-header a {
+        font-size: 28px; /* Smaller icons */
+        margin: 0 10px;
+    }
+
+    header nav {
+        padding: 10px 0;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items */
+    }
+
+    header nav ul li {
+        padding: 8px 0; /* Adjust padding for stacked items */
+    }
+
+    header nav a {
+        font-size: 16px; /* Smaller nav links */
+    }
+
+    .section-content {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+
+    .section-content h2 {
+        font-size: 2.2em; /* Smaller section headings */
+        margin-bottom: 30px;
+    }
+
+    .section-content h2 i {
+        margin-right: 10px;
+        font-size: 1em;
+    }
+
+    .experience-item h3, .project-item h3, .education-item h3 {
+        font-size: 1.4em; /* Smaller item headings */
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column for skills on mobile */
+    }
+
+    .skill-category h3 {
+        font-size: 1.2em; /* Smaller skill category headings */
+    }
+
+    footer {
+        padding: 30px 0;
+    }
+
+    footer .social-links a {
+        font-size: 28px; /* Smaller footer icons */
+        margin: 0 10px;
+    }
+
+    .contact-info p {
+        font-size: 1em; /* Smaller contact info text */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .tagline {
+        font-size: 0.9em;
+    }
+
+    .social-links-header a {
+        font-size: 24px;
+        margin: 0 8px;
+    }
+
+    .section-content h2 {
+        font-size: 1.8em;
+    }
+
+    .experience-item h3, .project-item h3, .education-item h3 {
+        font-size: 1.2em;
+    }
+
+    .skill-category h3 {
+        font-size: 1.1em;
+    }
+
+    footer .social-links a {
+        font-size: 24px;
+        margin: 0 8px;
+    }
+}
+
 .contact-info p {
     font-size: 1.15em; /* Slightly larger */
     margin-bottom: 12px;
