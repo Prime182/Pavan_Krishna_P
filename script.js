@@ -1,2 +1,9 @@
-// You can add JavaScript for interactive elements here if needed in the future.
-// For example, smooth scrolling for navigation links, or dynamic content loading.
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

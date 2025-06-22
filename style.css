@@ -1,15 +1,17 @@
 /* General Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #e9ecef; /* Lighter background */
+    color: #343a40; /* Darker text for better contrast */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 .container {
-    width: 80%;
+    width: 90%; /* Slightly wider container */
+    max-width: 1200px; /* Max width for large screens */
     margin: auto;
     overflow: hidden;
     padding: 0 20px;
@@ -17,101 +19,226 @@ body {
 
 /* Header Styles */
 header {
-    background: #333;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Darker, more professional gradient */
     color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #77aaff 3px solid;
+    padding: 60px 0 30px; /* More padding */
+    min-height: 150px;
+    border-bottom: #1abc9c 6px solid; /* Teal accent color */
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.08); /* Slightly more visible overlay */
+    transform: rotate(45deg);
+    z-index: 0;
+    animation: header-bg-animation 20s infinite linear; /* Background animation */
+}
+
+@keyframes header-bg-animation {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.05); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
 }
 
 header h1 {
     margin: 0;
-    padding-bottom: 10px;
+    font-size: 4.5em; /* Larger heading */
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    font-weight: 700; /* Bolder font */
 }
 
 header p {
-    font-style: italic;
-    margin-top: 0;
+    font-style: normal; /* Removed italic */
+    margin-top: 10px;
+    font-size: 1.4em; /* Larger sub-heading */
+    color: #ecf0f1; /* Lighter text */
+    font-weight: 300; /* Lighter font weight */
+}
+
+.tagline {
+    font-size: 1.2em; /* Slightly larger */
+    margin-top: 20px;
+    max-width: 800px; /* Wider max-width */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    color: #bdc3c7; /* Muted white */
+    font-weight: 300;
+}
+
+.social-links-header {
+    margin-top: 20px;
+}
+
+.social-links-header a {
+    color: #ecf0f1; /* Lighter icons */
+    margin: 0 15px; /* More spacing */
+    font-size: 32px; /* Larger icons */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links-header a:hover {
+    color: #1abc9c; /* Teal on hover */
+    transform: scale(1.2) translateY(-3px); /* Slight lift and scale */
+}
+
+header nav {
+    background: rgba(0, 0, 0, 0.4); /* Darker, more transparent background */
+    padding: 12px 0; /* More padding */
+    margin-top: 30px; /* More space from hero content */
+    border-radius: 8px; /* More rounded corners */
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 header nav ul {
     padding: 0;
     list-style: none;
+    margin: 0;
 }
 
 header nav ul li {
     display: inline;
-    padding: 0 15px;
+    padding: 0 25px; /* More spacing between links */
 }
 
 header nav a {
-    color: #fff;
+    color: #ecf0f1; /* Lighter text */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 18px; /* Slightly larger font */
+    font-weight: 600; /* Semi-bold */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header nav a:hover {
-    color: #77aaff;
-    font-weight: bold;
+    color: #1abc9c; /* Teal on hover */
+    transform: translateY(-2px); /* Slight lift */
 }
 
 /* Section Content Styles */
 .section-content {
-    padding: 20px 0;
+    padding: 40px 0; /* More vertical padding */
     background: #fff;
-    margin-bottom: 15px;
-    border-bottom: #ddd 1px solid;
+    margin-bottom: 25px; /* More space between sections */
+    border-radius: 10px; /* Rounded corners for sections */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* More prominent shadow */
+    animation: fade-in 0.8s ease-out; /* Fade-in animation for sections */
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .section-content h2 {
-    color: #333;
+    color: #2c3e50; /* Darker heading color */
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
+    margin-bottom: 40px; /* More space below heading */
+    font-size: 3em; /* Larger heading */
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-content h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100px; /* Wider underline */
+    height: 5px; /* Thicker underline */
+    background-color: #1abc9c; /* Teal underline */
+    border-radius: 3px;
 }
 
 .section-content h2 i {
-    margin-right: 10px;
-    color: #77aaff;
+    margin-right: 18px; /* More space for icon */
+    color: #1abc9c; /* Teal icon */
+    font-size: 1.2em; /* Larger icon */
 }
 
-/* Internship and Project Item Styles */
-.internship-item, .project-item, .education-item {
+/* Experience, Project, Education Item Styles */
+.experience-item, .project-item, .education-item {
     background: #f9f9f9;
     border: 1px solid #eee;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.internship-item h3, .project-item h3, .education-item h3 {
-    color: #555;
+.experience-item:hover, .project-item:hover, .education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.experience-item h3, .project-item h3, .education-item h3 {
+    color: #34495e; /* Darker heading */
     margin-top: 0;
+    font-size: 1.6em; /* Slightly larger */
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
-.internship-item .date {
-    font-style: italic;
-    color: #777;
-    margin-bottom: 10px;
+.experience-item .date {
+    font-style: normal; /* Removed italic */
+    color: #7f8c8d; /* Muted grey */
+    margin-bottom: 18px;
+    display: block;
+    font-size: 0.95em;
 }
 
 .project-item .tech-stack {
-    font-weight: bold;
-    color: #666;
-    margin-bottom: 10px;
+    font-weight: 500; /* Medium weight */
+    color: #555;
+    margin-bottom: 18px;
+    display: block;
+    font-size: 0.95em;
 }
 
-.project-item ul, .internship-item ul, .section-content ul {
-    list-style: disc;
-    margin-left: 20px;
+.project-item ul, .experience-item ul, .section-content ul {
+    list-style: none; /* Remove default bullet */
+    margin-left: 0;
     padding: 0;
 }
 
-.project-item ul li, .internship-item ul li, .section-content ul li {
-    margin-bottom: 5px;
+.project-item ul li, .experience-item ul li, .section-content ul li {
+    margin-bottom: 8px;
+    padding-left: 25px; /* Space for custom bullet */
+    position: relative;
+}
+
+.project-item ul li::before, .experience-item ul li::before, .section-content ul li::before {
+    content: '\2023'; /* Triangle bullet */
+    color: #1abc9c; /* Teal bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+    font-size: 0.8em; /* Smaller bullet */
+    top: 5px; /* Adjust vertical alignment */
 }
 
 /* Skills Grid */
@@ -123,36 +250,86 @@ header nav a:hover {
 }
 
 .skill-category {
-    background: #f0f0f0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    background: #f8f9fa; /* Lighter background */
+    padding: 20px; /* More padding */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* More prominent shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .skill-category h3 {
-    color: #444;
+    color: #34495e; /* Darker heading */
     margin-top: 0;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    border-bottom: 2px solid #1abc9c; /* Teal underline */
+    padding-bottom: 10px; /* More padding */
+    margin-bottom: 18px;
+    font-size: 1.4em; /* Slightly larger */
+    font-weight: 600;
 }
 
 /* Footer Styles */
 footer {
-    background: #333;
-    color: #fff;
+    background: #2c3e50; /* Darker footer */
+    color: #ecf0f1; /* Lighter text */
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    padding: 40px 0; /* More padding */
+    margin-top: 40px;
+    border-top: #1abc9c 5px solid; /* Teal border */
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+}
+
+footer p {
+    margin-bottom: 20px;
+    font-size: 1em; /* Slightly larger font */
+    color: #bdc3c7;
 }
 
 footer .social-links a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 24px;
+    color: #ecf0f1; /* Lighter icons */
+    margin: 0 18px; /* More spacing */
+    font-size: 32px; /* Larger icons */
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 footer .social-links a:hover {
-    color: #77aaff;
+    color: #1abc9c; /* Teal on hover */
+    transform: scale(1.2) translateY(-3px); /* Slight lift and scale */
+}
+
+/* Contact Section Specific Styles */
+.contact-info {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.contact-info p {
+    font-size: 1.15em; /* Slightly larger */
+    margin-bottom: 12px;
+    color: #495057; /* Darker text */
+}
+
+.contact-info p i {
+    margin-right: 12px;
+    color: #1abc9c; /* Teal icon */
+}
+
+.contact-info a {
+    color: #1abc9c; /* Teal link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #2c3e50; /* Darker on hover */
+    text-decoration: underline;
 }
