@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
     <header>
@@ -83,7 +84,7 @@
                     <p class="date">May 2024 – Jun 2024</p>
                     <p>My internship at the Indian Meteorological Department was a deep dive into climate data, focusing on the Discomfort Index (DI). I undertook a comprehensive analysis of 10 years (2013–2023) of hourly DI data, utilizing Python and Tableau to uncover critical patterns. Through this analysis, I identified significant positive correlations between temperature and DI, alongside varying correlation patterns with humidity, providing a clearer picture of discomfort levels.</p>
                     <p>I then translated these findings into compelling trend visualizations, highlighting the increasing discomfort during the May–August seasons over the years. This work culminated in proposing advanced forecasting models, including SARIMAX, and public alert systems, complete with interactive dashboards. A key finding from this experience was the critical importance of hourly granularity for precise DI trend analysis, which is vital for public health alerting and proactive measures.</p>
-                    <div class="slideshow-container">
+                    <div class="slideshow-container" id="slideshow-internship2">
                         <div class="mySlides fade">
                             <img src="Images/internship2/2.png" style="width:100%">
                         </div>
@@ -100,16 +101,15 @@
                             <img src="Images/internship2/WhatsApp Image 2025-06-23 at 00.51.24_4b0e1ebf.jpg" style="width:100%">
                         </div>
 
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <br>
-
-                    <div style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow-internship2')">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow-internship2')">&#10095;</a>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1, 'slideshow-internship2')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'slideshow-internship2')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'slideshow-internship2')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'slideshow-internship2')"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
             <div class="container">
                 <h2><i class="fas fa-project-diagram"></i> Projects</h2>
                 <div class="project-item">
-                <h3>AI-Driven Business Process Automation (<a href="https://drive.google.com/file/d/1h1UwdotF7EiP7rF5PtZTFrtKbVBVUUFe/view" target="_blank">link</a>)</h3>
+                <h3>AI-Driven Business Process Automation <a href="https://drive.google.com/file/d/1h1UwdotF7EiP7rF5PtZTFrtKbVBVUUFe/view" target="_blank" class="view-button">View</a></h3>
                     <p class="tech-stack"><strong>Stack:</strong> Python, Transformers (Modern-BERT), PostgreSQL, n8n, Gemini API</p>
                     <ul>
                         <li>Scraped leads using Apify, classified sentiments (positive/neutral/negative), and stored them in a SQL database.</li>
@@ -128,9 +128,26 @@
                         <li><strong>Accuracy:</strong> Achieved 94.82% on the sentiment classifier.</li>
                         <li><strong>Challenges:</strong> Addressed token limit handling, real-time delay resolution, and effective template embedding.</li>
                     </ul>
+                    <div class="image-grid">
+                        <div class="grid-item">
+                            <img src="Images/Project1/a13cd243-8080-4a9c-bef8-730c84308976_1175x355-removebg-preview.png" alt="Business Process Automation">
+                        </div>
+                        <div class="grid-item">
+                            <img src="Images/Project1/color-webhook-240-1deccb0e365ff4ea493396ad28638fb7.png" alt="Webhook">
+                        </div>
+                        <div class="grid-item">
+                            <img src="Images/Project1/Google-Gemini-Logo-PNG-Cutout.png" alt="Google Gemini">
+                        </div>
+                        <div class="grid-item">
+                            <img src="Images/Project1/n8n.png" alt="n8n">
+                        </div>
+                        <div class="grid-item">
+                            <img src="Images/Project1/[CITYPNG.COM]HD Python Logo Symbol Transparent PNG - 2000x2000.png" alt="Python">
+                        </div>
+                    </div>
                 </div>
                 <div class="project-item">
-                <h3>DIFAS – Discomfort Index Forecast and Alert System (<a href="https://github.com/Prime182/DIFAS" target="_blank">link</a>)</h3>
+                <h3>DIFAS – Discomfort Index Forecast and Alert System <a href="https://github.com/Prime182/DIFAS" target="_blank" class="view-button">View</a></h3>
                     <p class="tech-stack"><strong>Tech Stack:</strong> Flask, BiLSTM, Prophet, Open Meteo API, Twilio, Plotly</p>
                     <ul>
                         <li>Developed a deep learning model to forecast the Discomfort Index (DI) based on temperature and humidity.</li>
@@ -140,9 +157,24 @@
                         <li><strong>Performance:</strong> Achieved an R² of 0.9397 on test data.</li>
                         <li>Visualized forecasts with interactive Plotly graphs, incorporating user geolocation and custom alert settings for hourly data resolution.</li>
                     </ul>
+                    <div class="slideshow-container" id="slideshow-project2">
+                        <div class="mySlides fade">
+                            <img src="Images/project2/Screenshot 2025-06-23 085307.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/project2/Screenshot 2025-06-23 085446.png" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow-project2')">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow-project2')">&#10095;</a>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1, 'slideshow-project2')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'slideshow-project2')"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-item">
-                <h3>Outreach Pro – AI Job Outreach Assistant (<a href="https://github.com/Prime182/Outreach_pro-opensource-" target="_blank">link</a>)</h3>
+                <h3>Outreach Pro – AI Job Outreach Assistant <a href="https://github.com/Prime182/Outreach_pro-opensource-" target="_blank" class="view-button">View</a></h3>
                     <p class="tech-stack"><strong>Stack:</strong> FastAPI, MongoDB, Jinja2, Docker, Google Gemini, Hunter.io</p>
                     <ul>
                         <li>Engineered a platform to automate job outreach email workflows for job seekers and freelancers.</li>
@@ -151,6 +183,33 @@
                         <li>Developed a Dockerized backend with future support for comprehensive campaign analytics.</li>
                         <li><strong>Value Proposition:</strong> Combines AI scalability with human oversight for highly effective and targeted outreach.</li>
                     </ul>
+                    <div class="slideshow-container" id="slideshow-project3">
+                        <div class="mySlides fade">
+                            <img src="Images/project3/1.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/project3/2.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/project3/3.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/project3/4.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/project3/5.png" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow-project3')">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow-project3')">&#10095;</a>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1, 'slideshow-project3')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'slideshow-project3')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'slideshow-project3')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'slideshow-project3')"></span>
+                            <span class="dot" onclick="currentSlide(5, 'slideshow-project3')"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -158,12 +217,28 @@
         <section id="certifications" class="section-content">
             <div class="container">
                 <h2><i class="fas fa-certificate"></i> Certifications</h2>
-                <ul>
-                    <li> <a href="https://drive.google.com/file/d/19sLt37QAK93iu8p7xgK5fEwJE0w39vRu/view?usp=sharing" target="_blank">AWS Cloud Practitioner Essentials</a> – Amazon Web Services</li>
-                    <li> <a href="https://www.coursera.org/account/accomplishments/verify/ZWG719BMIAW4" target="_blank">Python for Data Science</a> – IBM / Coursera</li>
-                    <li> <a href="https://www.coursera.org/account/accomplishments/verify/U4CUDNJWEYPD" target="_blank">What is Data Science?</a> – IBM / Coursera</li>
-                    <li> <a href="https://www.linkedin.com/learning/certificates/15cccb47d0955b169c590edf2f9fa68a57a857f366050e77006ede11568f49b6?trk=share_certificate" target="_blank">Learning Power BI Desktop</a> – LinkedIn Learning</li>
-                </ul>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <a href="https://drive.google.com/file/d/19sLt37QAK93iu8p7xgK5fEwJE0w39vRu/view?usp=sharing" target="_blank">
+                            <img src="Images/Certifications/AWC cloud prac.png" alt="AWS Cloud Practitioner Essentials">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="https://www.linkedin.com/learning/certificates/15cccb47d0955b169c590edf2f9fa68a57a857f366050e77006ede11568f49b6?trk=share_certificate" target="_blank">
+                            <img src="Images/Certifications/Learning powerbi desktop.png" alt="Learning Power BI Desktop">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/ZWG719BMIAW4" target="_blank">
+                            <img src="Images/Certifications/Python for Data Science.png" alt="Python for Data Science">
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/U4CUDNJWEYPD" target="_blank">
+                            <img src="Images/Certifications/what is data science.png" alt="What is Data Science?">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -255,7 +330,7 @@
                     <p><i class="fas fa-phone"></i> Phone: <a href="tel:+917338797300">+91-7338797300</a></p>
                     <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/pavan-krishna-p-ba0945257" target="_blank">Pavan Krishna P</a></p>
                     <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Prime182" target="_blank">Prime182</a></p>
-                    <p><i class="fas fa-file-pdf"></i> Resume: <a href="Stylish - Copy.pdf" target="_blank">Download PDF</a></p>
+                    <p><i class="fas fa-file-pdf"></i> Resume: <a href="Resume.pdf" target="_blank">Download PDF</a></p>
                 </div>
             </div>
         </section>

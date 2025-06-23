@@ -18,14 +18,14 @@
     color: #555;
 }
 
-.image-gallery {
+.gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-content: center;
 }
 
-.image-gallery img {
+.gallery-item img {
     width: 100%;
     height: 200px; /* Fixed height for all images */
     object-fit: cover; /* Crop images to fill the container while maintaining aspect ratio */
@@ -35,6 +35,6 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.image-gallery img:hover {
+.gallery-item img:hover {
     transform: scale(1.03);
 }
