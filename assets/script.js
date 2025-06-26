@@ -31,3 +31,18 @@ themeToggle.addEventListener('change', function() {
         localStorage.setItem('theme', 'light');
     }
 });
+
+// Page View Counter
+document.addEventListener('DOMContentLoaded', function() {
+    const viewCountElement = document.getElementById('page-view-count');
+    let pageViews = localStorage.getItem('pageViews');
+
+    if (pageViews) {
+        pageViews = parseInt(pageViews) + 1;
+    } else {
+        pageViews = 1;
+    }
+
+    localStorage.setItem('pageViews', pageViews);
+    viewCountElement.textContent = `Page Views: ${pageViews}`;
+});

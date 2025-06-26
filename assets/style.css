@@ -769,3 +769,16 @@ body.dark-mode .view-button {
 body.dark-mode .view-button:hover {
     background-color: #16a085;
 }
+
+/* Page View Count Styles */
+.page-view-count {
+    color: #ecf0f1; /* Light text color */
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin-top: 10px; /* Space above social links */
+    margin-bottom: 10px; /* Space below social links */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+body.dark-mode .page-view-count {
+    color: #d0d0d0; /* Lighter text in dark mode */
+}
