@@ -60,10 +60,11 @@ header::before {
 
 header h1 {
     margin: 0;
-    font-size: 4.5em; /* Larger heading */
+    font-size: 3em !important; /* Set to 3em for consistency across all header titles, enforced */
     letter-spacing: 3px;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
     font-weight: 700; /* Bolder font */
+    margin-bottom: 20px; /* Ensure consistent spacing */
 }
 
 header p {
@@ -365,6 +366,16 @@ body.dark-mode .contact-info a:hover {
 @keyframes fade-in {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+header h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px; /* Consistent spacing with h1 */
+    font-size: 3em !important; /* Enforce consistency */
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
 }
 
 .section-content h2 {
@@ -781,4 +792,12 @@ body.dark-mode .view-button:hover {
 
 body.dark-mode .page-view-count {
     color: #d0d0d0; /* Lighter text in dark mode */
+}
+
+.page-title {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
 }

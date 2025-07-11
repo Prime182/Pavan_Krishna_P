@@ -1,13 +1,3 @@
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
 const themeToggle = document.getElementById('checkbox');
 const modeIndicator = document.querySelector('.mode-indicator');
 
